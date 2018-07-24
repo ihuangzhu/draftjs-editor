@@ -12,7 +12,7 @@ gulp.task('html', function(){
 
 const sassSrc = 'src/sass/**/*.scss';
 gulp.task('css', function(){
-    return gulp.src(sassSrc)
+    return gulp.src([sassSrc, './node_modules/draft-js/dist/Draft.css'])
         .pipe(sass())
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'));
