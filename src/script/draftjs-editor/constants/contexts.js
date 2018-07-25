@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const handlers = {
+    editorInitHandler: (callback) => {
+    },
     imageUploadHandler: (element, callback) => {
         const image = element.files[0];
         if (image && image.type.indexOf('image/') === 0) {
