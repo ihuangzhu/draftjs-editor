@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import reducer from './reducers';
 import MyEditor from './containers/MyEditor';
 import {HandlerContext, handlers} from './constants/contexts';
-import ToolbarResourceImageUpload from "./components/ToolbarResourceImageUpload";
 
 const store = createStore(reducer);
 
@@ -33,6 +32,6 @@ export default class DraftjsEditor extends React.Component {
 /**
  * 声明数据类型
  */
-ToolbarResourceImageUpload.propTypes = {
+DraftjsEditor.propTypes = {
     handlers: PropTypes.object
 };

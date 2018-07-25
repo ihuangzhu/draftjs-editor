@@ -4,7 +4,8 @@
   "description": "The editor is base on facebook draftjs project.",
   "scripts": {
     "dev": "webpack --config webpack.config.babel.js",
-    "watch": "webpack-dev-server --allowed-hosts --config webpack.config.babel.js"
+    "watch": "webpack-dev-server --allowed-hosts --config webpack.config.babel.js",
+    "prod": "webpack -p --config webpack.config.babel.js"
   },
   "main": "dist/js/index",
   "author": "ihuangzhu@gmail.com",

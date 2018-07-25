@@ -1,5 +1,4 @@
 import path from 'path';
-import webpack from 'webpack';
 
 const src = './src';
 const dist = './dist';
@@ -15,9 +14,15 @@ export default {
     },
 
     output: {
+        libraryTarget: 'umd',
         path: path.resolve(__dirname, script.dist),
         publicPath: '/js',
         filename: '[name].js'
+    },
+
+    externals: {
+        'react': 'react',
+        'react-dom': 'react-dom'
     },
 
     module: {
@@ -35,12 +40,6 @@ export default {
             'js': path.resolve(__dirname, script.src)
         }
     },
-
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        })
-    ],
 
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
