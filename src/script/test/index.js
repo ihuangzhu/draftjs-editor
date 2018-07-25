@@ -5,7 +5,9 @@ import DraftEditor from '../draftjs-editor/index';
 
 const customHandler = {
     editorInitHandler: (callback) => {
-        callback('{"blocks":[{"key":"epvd6","text":"这是一条测试！","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":4,"length":2,"style":"BOLD"}],"entityRanges":[],"data":{}}],"entityMap":{}}');
+        callback(JSON.parse(
+            '{"blocks":[{"key":"epvd6","text":"这是一条测试！","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":4,"length":2,"style":"BOLD"}],"entityRanges":[],"data":{}}],"entityMap":{}}'
+        ));
     },
     imageUploadHandler: (element, callback) => {
         alert('请选择图片文件！');

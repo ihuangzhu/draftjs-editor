@@ -18,7 +18,7 @@ class MyEditor extends React.Component {
         const {actions, initHandle} = this.props;
         initHandle((content) => {
             content && actions.setEditableEditorState(EditorState.createWithContent(
-                convertFromRaw(JSON.parse(content)),
+                convertFromRaw(content),
                 decorator
             ));
         });
