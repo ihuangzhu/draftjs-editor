@@ -1,6 +1,6 @@
 {
   "name": "@ihuangzhu/draftjs-editor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The editor is base on facebook draftjs project.",
   "scripts": {
     "dev": "webpack --config webpack.config.babel.js",
