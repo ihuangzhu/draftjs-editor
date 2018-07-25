@@ -7,7 +7,7 @@ import {
     EDITABLE_IMAGE_REMARK_BLOCK_ADD,
     EDITABLE_IMAGE_REMARK_BLOCK_DELETE
 } from "../constants/actionTypes";
-import decorator from '../decorators';
+import decorator from '../decorators/index';
 
 const defaultState = {
     editableReadOnly: false,

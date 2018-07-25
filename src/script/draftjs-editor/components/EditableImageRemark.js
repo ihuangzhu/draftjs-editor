@@ -11,7 +11,7 @@ export default class EditableImageRemark extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state ={
+        this.state = {
             value: props.value,
             editable: false
         };
@@ -25,7 +25,7 @@ export default class EditableImageRemark extends React.Component {
             actions.addEditableImageRemarkBlock(block.getKey());
             this.setState({editable: true});
             setTimeout(() => {
-                $(this.input).select();
+                this.input.select();
             });
         };
 
@@ -45,7 +45,7 @@ export default class EditableImageRemark extends React.Component {
         const {value, editable} = this.state;
 
         if (editable) return (
-            <form className="form-inline" onSubmit={(e) => e.preventDefault()}>
+            <div className="form-inline">
                 <div className="input-group input-group-sm mx-auto mb-2">
                     <input
                         type="text"
@@ -64,7 +64,7 @@ export default class EditableImageRemark extends React.Component {
                         </button>
                     </div>
                 </div>
-            </form>
+            </div>
         );
         return (
             <figcaption

@@ -15,7 +15,7 @@ class ToolbarBlock extends React.Component {
         this._handleBlockStyleChange = (e, style) => {
             const {editable, actions} = this.props;
 
-            if (e.button == 0) {
+            if (e.button === 0) {
                 e.preventDefault();
                 actions.setEditableEditorState(
                     RichUtils.toggleBlockType(editable.editableEditorState, style)
@@ -32,7 +32,7 @@ class ToolbarBlock extends React.Component {
         ).getType();
 
         return (
-            <div className="btn-group btn-group-sm mb-2 mr-2" role="group" aria-label="First group">
+            <div className="btn-group btn-group-sm mb-2 mr-2" role="group">
                 <ToolbarBlockHeader
                     disabled={disabled}
                     currentBlockStyle={blockStyle}

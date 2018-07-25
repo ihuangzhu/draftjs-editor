@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
 
-import reducer from './reducers';
-import MyEditor from './containers/MyEditor';
+import DraftEditor from './draftjs-editor';
 
-const store = createStore(reducer);
+const customHandler = {
+    imageUploadHandler: (element, callback) => {
+        alert('请选择图片文件！');
+    }
+};
 
 ReactDOM.render((
-    <Provider store={store}>
-        <MyEditor />
-    </Provider>
+    <DraftEditor
+        handlers={customHandler}
+    />
 ), document.getElementById('editor'));

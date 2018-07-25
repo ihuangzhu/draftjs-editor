@@ -18,7 +18,7 @@ export default class Toolbar extends React.Component {
                 className="card-header editor-toolbar"
                 ref={el => this.toolbar = el}
             >
-                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div className="btn-toolbar" role="toolbar">
                     <ToolbarBlock
                         toolbar={toolbar}
                         editable={editable}

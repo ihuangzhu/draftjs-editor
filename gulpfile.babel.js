@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import pug from 'gulp-pug';
 import sass from 'gulp-sass';
+import concat from 'gulp-concat';
 import minifyCSS from 'gulp-csso';
 
 const pugSrc = 'src/templates/*.pug';
@@ -10,10 +11,14 @@ gulp.task('html', function(){
         .pipe(gulp.dest('dist/html'));
 });
 
-const sassSrc = 'src/sass/**/*.scss';
-gulp.task('css', function(){
-    return gulp.src([sassSrc, './node_modules/draft-js/dist/Draft.css'])
+const stylesSrc = [
+    'src/sass/**/*.scss',
+    './node_modules/draft-js/dist/Draft.css'
+];
+gulp.task('styles', function(){
+    return gulp.src(stylesSrc)
         .pipe(sass())
+        .pipe(concat('draftjs-editor.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'));
 });
@@ -26,7 +31,7 @@ gulp.task('fonts', function(){
 
 gulp.task('watch', () => {
     gulp.watch(pugSrc, ['html']);
-    gulp.watch(sassSrc, ['css']);
+    gulp.watch(stylesSrc, ['styles']);
 });
 
-gulp.task('default', [ 'fonts', 'html', 'css']);
+gulp.task('default', ['html', 'styles', 'fonts']);

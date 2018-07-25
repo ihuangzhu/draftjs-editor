@@ -18,22 +18,18 @@ export default (state = defaultState, action) => {
             return Object.assign({}, state, {
                 toolbarLinkModalVisible: action.toolbarLinkModalVisible
             });
-            break;
         case TOOLBAR_IMAGE_MODAL_VISIBLE:
             return Object.assign({}, state, {
                 toolbarImageModalVisible: action.toolbarImageModalVisible
             });
-            break;
         case TOOLBAR_EMBED_MODAL_VISIBLE:
             return Object.assign({}, state, {
                 toolbarEmbedModalVisible: action.toolbarEmbedModalVisible
             });
-            break;
         case TOOLBAR_SETTING_MODAL_VISIBLE:
             return Object.assign({}, state, {
                 toolbarSettingModalVisible: action.toolbarSettingModalVisible
             });
-            break;
         default:
             return state;
     }

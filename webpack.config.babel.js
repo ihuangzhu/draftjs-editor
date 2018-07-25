@@ -10,7 +10,7 @@ const script = {
 
 export default {
     entry: {
-        'index': 'js/index.js'
+        'draftjs-editor': 'js/index.js'
     },
 
     output: {
@@ -40,6 +40,7 @@ export default {
             'process.env.NODE_ENV': JSON.stringify('development')
         })
     ],
+
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,

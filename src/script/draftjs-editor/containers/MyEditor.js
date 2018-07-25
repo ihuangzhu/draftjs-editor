@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import actions from "../actions";
+import actions from "../actions/index";
 import Toolbar from './Toolbar';
 import Editable from './Editable';
 
@@ -12,20 +12,18 @@ class MyEditor extends React.Component {
         const {toolbar, editable, actions} = this.props;
 
         return (
-            <form>
-                <div className="form-group card">
-                    <Toolbar
-                        toolbar={toolbar}
-                        editable={editable}
-                        actions={actions}
-                    />
-                    <Editable
-                        toolbar={toolbar}
-                        editable={editable}
-                        actions={actions}
-                    />
-                </div>
-            </form>
+            <div className="card">
+                <Toolbar
+                    toolbar={toolbar}
+                    editable={editable}
+                    actions={actions}
+                />
+                <Editable
+                    toolbar={toolbar}
+                    editable={editable}
+                    actions={actions}
+                />
+            </div>
         );
     }
 }
@@ -36,12 +34,12 @@ MyEditor.propTypes = {
     actions: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     toolbar: state.toolbar,
     editable: state.editable
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(actions, dispatch)
 });
 
