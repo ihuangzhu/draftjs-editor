@@ -2,7 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 
 const src = './src';
-const dist = './build/assets';
+const dist = './dist';
 const script = {
     src: src + '/script',
     dist: dist + '/js'
@@ -10,7 +10,8 @@ const script = {
 
 export default {
     entry: {
-        'draftjs-editor': 'js/index.js'
+        'index': 'js/draftjs-editor/index.js',
+        'draftjs-editor': 'js/test/index.js'
     },
 
     output: {

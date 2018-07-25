@@ -1,11 +1,17 @@
 {
-  "name": "draftjs-editor",
+  "name": "@ihuangzhu/draftjs-editor",
   "version": "1.0.4",
   "description": "The editor is base on facebook draftjs project.",
   "scripts": {
-    "dev": "webpack-dev-server --allowed-hosts --config webpack.config.babel.js"
+    "dev": "webpack --config webpack.config.babel.js",
+    "watch": "webpack-dev-server --allowed-hosts --config webpack.config.babel.js"
   },
+  "main": "dist/js/draftjs-editor",
   "author": "ihuangzhu@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihuangzhu/draftjs-editor"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
