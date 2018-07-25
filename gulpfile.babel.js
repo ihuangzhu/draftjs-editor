@@ -21,10 +21,10 @@ gulp.task('styles', function(){
         .pipe(gulp.dest('dist/css'));
 });
 
-const fontsSrc = 'node_modules/font-awesome/fonts/**/*';
+const fontsSrc = 'node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/**/*';
 gulp.task('fonts', function(){
     return gulp.src(fontsSrc)
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('dist/fonts/fontawesome'));
 });
 
 gulp.task('watch', () => {

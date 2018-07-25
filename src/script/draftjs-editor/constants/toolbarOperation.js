@@ -13,7 +13,7 @@ export default {
     repeat: {
         title: '重做',
         children: (
-            <span className="fa fa-repeat"/>
+            <span className="fa fa-redo"/>
         )
     }
 };

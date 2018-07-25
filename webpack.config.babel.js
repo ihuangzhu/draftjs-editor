@@ -20,10 +20,10 @@ export default {
         filename: '[name].js'
     },
 
-    externals: {
-        'react': 'react',
-        'react-dom': 'react-dom'
-    },
+    // externals: {
+    //     'react': 'react',
+    //     'react-dom': 'react-dom'
+    // },
 
     module: {
         rules: [
