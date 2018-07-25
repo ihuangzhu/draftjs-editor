@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import pug from 'gulp-pug';
 import sass from 'gulp-sass';
-import concat from 'gulp-concat';
 import minifyCSS from 'gulp-csso';
 
 const pugSrc = 'src/templates/*.pug';
@@ -18,7 +17,6 @@ const stylesSrc = [
 gulp.task('styles', function(){
     return gulp.src(stylesSrc)
         .pipe(sass())
-        .pipe(concat('draftjs-editor.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'));
 });
